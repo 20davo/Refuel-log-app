@@ -4,3 +4,5 @@ start cmd /k "cd backend && node server.js"
 
 echo Frontend indul...
 start cmd /k "cd frontend && ng serve"
+
+start "" "http://localhost:4200"
