@@ -1,16 +1,16 @@
-# Refuel Log App
+# Fuel Tracker
 
-Refuel Log App is a university full-stack CRUD project for tracking fuel consumption. It has a complete basic flow: users can register, log in, manage their cars, and save refuel records for each vehicle.
+Fuel Tracker is a university full-stack CRUD project for tracking fuel consumption. It has a complete basic flow in which users can register, log in, manage their cars, and save refueling records for each vehicle.
 
 ## About
 
-I built the app mainly to practice the basics of the MEAN stack in a real use case. It is not meant to cover every feature a production fuel tracking system could have, but it does connect the most important CRUD parts into one working application.
+I built the app mainly to practice the basics of the MEAN stack in a real use case. It is not meant to cover every feature a production fuel tracking system could have, but it does bring the most important CRUD parts together in one working application.
 
 The frontend is made with Angular and Angular Material. The backend is an Express API that stores data in MongoDB through Mongoose.
 
-After logging in, users can only see and manage their own cars and refuel entries. Passwords are hashed with bcrypt, and private requests use JWT authentication. The Angular side also protects the account pages, so they cannot be opened without a valid login.
+After logging in, users can only see and manage their own cars and refueling entries. Passwords are hashed with bcrypt, and protected API routes use JWT authentication. The Angular side also protects the account pages, so they cannot be opened without logging in.
 
-Each refuel entry stores the date, odometer reading, fuel amount, and unit price. The backend calculates the total cost. If the car already has an earlier entry, it also calculates fuel consumption from the odometer difference.
+Each refueling entry stores the date, odometer reading, fuel amount, and unit price. The backend calculates the total cost. If the car already has an earlier entry, it also calculates fuel consumption from the odometer difference.
 
 ## Stack
 
@@ -23,15 +23,17 @@ Each refuel entry stores the date, odometer reading, fuel amount, and unit price
 
 ## API
 
-The backend runs on `http://localhost:5000` by default. Authentication is handled under `/api/auth`, car data under `/api/cars`, and refuel records under `/api/refuel`. A small `/ping` route is also available for checking whether the server is running.
+The backend runs at `http://localhost:5000` by default. Authentication is handled under `/api/auth`, car data under `/api/cars`, and refueling records under `/api/refuel`. A small `/ping` route is also available for checking whether the server is running.
 
 ## Setup
+
+You need Node.js and a running MongoDB instance.
 
 Create a `.env` file in the `backend` folder:
 
 ```env
 PORT=5000
-MONGO_URL=mongodb://localhost:27017/refuel-log
+MONGO_URL=mongodb://localhost:27017/fuel-tracker
 JWT_SECRET=your_secret_key
 ```
 
@@ -55,7 +57,7 @@ The frontend runs at `http://localhost:4200`.
 
 ## Testing
 
-Cypress tests cover the main flows, including login, car creation, adding a refuel entry, and deleting one.
+Cypress tests cover the main flows, including registration and login, adding a car with a refueling entry, and deleting a car. The backend, the frontend, and MongoDB must be running before you start the tests.
 
 ```bash
 cd frontend
@@ -74,8 +76,8 @@ npm run cypress:run
 ### My Cars
 ![Cars page](assets/images/cars.png)
 
-### Refuel Log
-![Refuel log page](assets/images/refuel.png)
+### Refueling Log
+![Refueling log page](assets/images/refuel.png)
 
 ## What I Learned
 
