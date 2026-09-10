@@ -1,5 +1,11 @@
 # Fuel Tracker
 
+![Angular](https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-5FA04E?logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)
+
 Fuel Tracker is a university full-stack CRUD project for tracking fuel consumption. It has a complete basic flow in which users can register, log in, manage their cars, and save refueling records for each vehicle.
 
 ## About
